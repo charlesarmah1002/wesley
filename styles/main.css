@@ -310,7 +310,8 @@ section.portfolio .section-title {
     padding-bottom: 10px;
 }
 section.portfolio .container {
-    width: 1200px;
+    width: 854px;
+    height: 480px;
     overflow: hidden;
     display: flex;
     align-items: center;
