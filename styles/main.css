@@ -1,0 +1,398 @@
+:root {
+    /* colors */
+    --rich-black: #023c40;
+    --dark-jungle-green: #092324;
+    --white: #fcfcfc;
+    --blue-crayola: #7C9EB2;
+    --sizzling-red: #ff495c;
+    --pale-dogwood: #CCB7AE70;
+    --off-white: #f4f1f6;
+    --off-white-point7: #f4f1f670;
+}
+
+/* FONTS */
+@font-face {
+    font-family: Cairo;
+    src: url(../assets/fonts/Cairo/Cairo-VariableFont_slnt\,wght.ttf);
+}
+@font-face {
+    font-family: montserrat;
+    src: url(../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: secular-one;
+    src: url(../assets/fonts/Secular_One/SecularOne-Regular.ttf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    height: 100vh;
+    font-family: montserrat, sans-serif;
+    font-size: 1.1rem;
+    background: linear-gradient(-13deg, var(--dark-jungle-green), var(--rich-black));
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+.section-title {
+    font-size: 3rem;
+    margin: 10px;
+    text-transform: uppercase;
+}
+
+/* main-sections */
+section.header-and-hero {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    border-radius: 0 0 200px 0;
+    height: 70vh;
+    position: relative;
+}
+section.header-and-hero:after {
+    content: '';
+    width: 60%;
+    height: 3px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: var(--white);
+    position: absolute;
+    margin: auto;
+    border-radius: 5px;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+    background: #fcfcfc50;
+    backdrop-filter: blur(10px);
+}
+nav.main-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 30px;
+}
+.logo {
+    font-family: secular-one;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid transparent;
+    padding-left: 5px;
+    transition: 0.4s;
+    border-radius: 10px;
+}
+.logo:hover {
+    border: 3px solid;
+    border-radius: 10px;
+}
+.logo .name {
+    margin-left: 5px;
+    border-left: 1px solid;
+    padding: 5px;
+}
+.logo .name span {
+    color: var(--blue-crayola);
+}
+
+/* SEARCH BAR */
+.search-bar {
+    max-width: 250px;
+    width: 90%;
+    height: 30px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.search-bar input {
+    font-size: 1.1rem;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--white);
+    padding: 5px;
+    background: transparent;
+    color: var(--white);
+    border-radius: 10px;
+    outline: none;
+    transition: 0.3s;
+}
+.search-bar input::placeholder {
+    color: var(--white);
+    transition: 0.3s;
+}
+.search-bar input:focus::placeholder {
+    opacity: 0.5;
+}
+.search-bar button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 30px;
+    border: 2px solid;
+    background: var(--rich-black);
+    color: var(--white);
+    cursor: pointer;
+    outline: none;
+    border-radius: 0 10px 10px 0;
+}
+
+/* MENU */
+.menu-container ul li {
+    display: inline;
+    margin-left: 3px;
+}
+.menu-container ul li a {
+    padding: 10px 5px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+.menu-container ul li a:hover {
+    background: #023c40;
+}
+
+/* MENU TOGGLE */
+.menu-toggle {
+    display: none;
+}
+
+/* hero section */
+section.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0 20px;
+}
+section.hero .image-container {
+    width: 80%;
+    max-width: 400px;
+    min-height: 300px;
+    overflow: hidden;
+    margin: 10px;
+}
+section.hero .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+section.hero .content {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 350px;
+    text-align: center;
+}
+section.hero .content h3{
+    font-size: 40px;
+}
+
+
+/* buttons */
+.lm-btn {
+    background: var(--white);
+    color: var(--blue-crayola);
+    padding: 12px 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+.lm-btn:hover {
+    background: var(--blue-crayola);
+    color: var(--white);
+}
+
+/* services section */
+section.services {
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    background: url(../assets/img/photo_2018-07-04_01-46-18\ copy.png), var(--pale-dogwood);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+/* card section */
+.card-section {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 850px;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.card {
+    width: 70%;
+    max-width: 250px;
+    background: var(--pale-dogwood);
+    backdrop-filter: blur(3px);
+    min-height: 250px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: default;
+}
+.card:hover {
+    scale: 1.1;
+    backdrop-filter: blur(10px);
+    background: var(--off-white-point7);
+}
+.card-section .card .image {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: var(--dark-jungle-green);
+    margin-bottom: 10px;
+    border-bottom: 2px solid;
+}
+.card-section .card .content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px;
+}
+.card-section .card .content h4 {
+    margin: 10px;
+    font-size: 1.3rem;
+}
+
+/* portfolio */
+section.portfolio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    color: var(--off-white);
+    position: relative;
+    background: var(--dark-jungle-green);
+}
+section.portfolio .section-title {
+    padding-bottom: 10px;
+}
+section.portfolio .container {
+    width: 1200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+section.portfolio .container .item {
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+}
+section.portfolio .container .item video {
+    width: 100%;
+    height: 100%;
+}
+.hover-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    background: #0d0d0d70;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 2rem;
+    text-align: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+section.portfolio .container .item:hover .hover-item {
+    opacity: 1;
+}
+section.portfolio .container .social-media-frame {
+    width: 300px;
+    height: 600px;
+    background: var(--off-white-point7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+/* footer */
+footer {
+    color: var(--off-white);
+    border-top: 2px solid;
+    padding: 20px;
+    min-height: 30vh;
+    background: var(--rich-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer .logo {
+    width: fit-content;
+    margin: auto;
+    cursor: default;
+}
+footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px;
+}
+footer .container .side-title {
+    font-size: 4rem;
+}
+footer .container ul li {
+    display: inline;
+    margin: 20px;
+    padding: 10px;
+    font-size: 30px;
+    opacity: 0.7;
+    transition: 0.4s;
+}
+footer .container ul li:hover {
+    opacity: 1;
+}
