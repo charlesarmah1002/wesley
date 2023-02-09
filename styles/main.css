@@ -36,6 +36,7 @@ body {
     font-family: montserrat, sans-serif;
     font-size: 1.1rem;
     background: linear-gradient(-13deg, var(--dark-jungle-green), var(--rich-black));
+    position: relative;
 }
 a {
     text-decoration: none;
@@ -136,7 +137,6 @@ nav.main-navigation {
 }
 .search-bar input::placeholder {
     color: var(--white);
-    transition: 0.3s;
 }
 .search-bar input:focus::placeholder {
     opacity: 0.5;
@@ -394,5 +394,28 @@ footer .container ul li {
     transition: 0.4s;
 }
 footer .container ul li:hover {
+    opacity: 1;
+}
+footer .container.second{
+    flex-direction: row;
+}
+footer .container.second a {
+    margin: 20px;
+}
+
+/* back-to-top button */
+a.back-to-top {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    padding: 10px 15px;
+    background: var(--off-white-point7);
+    border-radius: 10px;
+    opacity: 0.7;
+    transition: 0.3s;
+    backdrop-filter: blur(10px);
+}
+a.back-to-top:hover {
+    background: var(--off-white);
     opacity: 1;
 }
