@@ -101,10 +101,10 @@
             </div>
             <div class="container">
                 <div class="twitter social-media-frame">
-                    <i class="fa-brands fa-twitter"></i>
+                    <!-- <i class="fa-brands fa-twitter"></i> -->
                 </div>
-                <div class="instagram social-media-frame">
-                    <i class="fa-brands fa-instagram"></i>
+                <div class="instagram social-media-frame" id="instagram-feed">
+                    <!-- <i class="fa-brands fa-instagram"></i> -->
                 </div>
                 <div class="youtube social-media-frame">
                     <i class="fa-brands fa-youtube"></i>
@@ -135,5 +135,18 @@
             </div> 
         </section>
     </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+	<script type="text/javascript">
+	var userFeed = new Instafeed({
+		get: 'user',
+		target: "instagram-feed",
+    	resolution: 'low_resolution',
+		accessToken: 'YOUR_INSTAGRAM_ACCESS_TOKEN_GOES_HEREIGQVJYUTI0TUg2c05yWExMY0w5eC1jUkk5bFAxdkZAfWHpHVWxZATUZAKUndXZAUlzRDhDN2hVWkxXWEZAVNGdSOHRkMEdIa2puNFFHenRjZAjYxdnUzclFlbDJIUWdHc1hkYzdUSF9tNVpkUjRKeFNvbnZAHNQZDZD'
+	});
+	userFeed.run();
+	</script>
 </body>
 </html>
