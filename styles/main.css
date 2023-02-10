@@ -48,6 +48,9 @@ a {
     margin: 10px;
     text-transform: uppercase;
 }
+section {
+    position: relative;
+}
 
 /* main-sections */
 section.header-and-hero {
@@ -58,8 +61,10 @@ section.header-and-hero {
     background-position: center;
     color: var(--white);
     border-radius: 0 0 200px 0;
-    height: 70vh;
+    min-height: 500px;
+    height: fit-content;
     position: relative;
+    margin-bottom: 30px;
 }
 section.header-and-hero:after {
     content: '';
@@ -181,6 +186,7 @@ section.hero {
     justify-content: space-evenly;
     width: 100%;
     padding: 0 20px;
+    margin-top: 10px;
 }
 section.hero .image-container {
     width: 80%;
@@ -372,6 +378,7 @@ section.social-media .container .instagram {
 }
 section.social-media .container .instagram blockquote {
     max-width: 854px !important;
+    width: 100% !important;
 }
 
 /* footer */
